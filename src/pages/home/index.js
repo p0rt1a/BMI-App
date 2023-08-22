@@ -33,7 +33,7 @@ function Home() {
 
       setResult(bmiResult);
 
-      var text = generateAdviceTest(bmiResult);
+      var text = generateAdviceText(bmiResult);
 
       setAdviceText(text);
     },
@@ -47,25 +47,15 @@ function Home() {
     return Math.round(result);
   };
 
-  const generateAdviceTest = (result) => {
-    var text = "no text";
-
-    switch (result) {
+  const generateAdviceText = (result) => {
+    switch (true) {
       case result < 18.5:
-        text =
-          "Eğer bundan memnunsanız ve korumak isterseniz vücut kitle indeksiniz kadar kalori almanız gerekmektedir. Tercihiniz kilo almaktan yana ise bu durumda vücut kitle indeksinizden yaklaşık olarak 500 kalori üstünde beslenmeniz sağlıklı şekilde kilo almanızı sağlayacaktır. Aynı şekilde yediklerinizden aldığınız kalori vücut kitle indeksinizden az miktarda ise eğer bu da kilo verimi ile sonuçlanacaktır. İnsan vücudu günlük ortalama 2500 kalori yakmaktadır. Yakılan bu ortalama kalori günlük yaşantımızı sürdürürken harcadığımız enerji miktarıdır. Günlük kilo alımını destekleyen egzersizler yapmak, yemeklerden öncesinde bir parmak kadar tuz yemek/yalamak; yemek yeme esnasında çok fazla yemek yerine besin değeri yüksek besinler ve yüksek lif kaynağı olan besinler tüketmek hem midenizi yormadan gereken kalori miktarını almanızı sağlar hem de kilo alımını destekler. İdeal beden insanın kendisini mutlu ve sağlıklı hissettiği bedendir. Kendinizi sevmeyi unutmayın...";
-        break;
+        return "Eğer bundan memnunsanız ve korumak isterseniz vücut kitle indeksiniz kadar kalori almanız gerekmektedir. Tercihiniz kilo almaktan yana ise bu durumda vücut kitle indeksinizden yaklaşık olarak 500 kalori üstünde beslenmeniz sağlıklı şekilde kilo almanızı sağlayacaktır. Aynı şekilde yediklerinizden aldığınız kalori vücut kitle indeksinizden az miktarda ise eğer bu da kilo verimi ile sonuçlanacaktır. İnsan vücudu günlük ortalama 2500 kalori yakmaktadır. Yakılan bu ortalama kalori günlük yaşantımızı sürdürürken harcadığımız enerji miktarıdır. Günlük kilo alımını destekleyen egzersizler yapmak, yemeklerden öncesinde bir parmak kadar tuz yemek/yalamak; yemek yeme esnasında çok fazla yemek yerine besin değeri yüksek besinler ve yüksek lif kaynağı olan besinler tüketmek hem midenizi yormadan gereken kalori miktarını almanızı sağlar hem de kilo alımını destekler. İdeal beden insanın kendisini mutlu ve sağlıklı hissettiği bedendir. Kendinizi sevmeyi unutmayın...";
       case result > 25:
-        text =
-          "Eğer bundan memnunsanız ve korumak isterseniz vücut kitle indeksiniz kadar kalori almanız gerekmektedir. Tercihiniz kilo vermekten yana ise bu durumda vücut kitle indeksinizden yaklaşık olarak 500 kalori altında beslenmeniz sağlıklı şekilde kilo vermenizi sağlayacaktır. Aynı şekilde yediklerinizden aldığınız kalori vücut kitle indeksinizden fazla miktarda ise eğer bu da kilo alımı ile sonuçlanacaktır. İnsan vücudu günlük ortalama 2500 kalori yakmaktadır. Yakılan bu ortalama kalori günlük yaşantımızı sürdürürken harcadığımız enerji miktarıdır. Günlük yaklaşık 40 dakika normal/hızlı tempoda yürümek, yemeklerden öncesinde 1-2 bardak su ve yeşillik çiğnemek; yemek yerken çok çiğneyip her bir lokmayı farkındalıkla tüketmek hem daha az besinle doymanızı hem de harcadığınız enerjinin/kalorinin alınan kaloriden fazla olmasını sağlar ve kilo verimini destekler. İdeal beden insanın kendisini mutlu ve sağlıklı hissettiği bedendir. Kendinizi sevmeyi unutmayın…";
-        break;
+        return "Eğer bundan memnunsanız ve korumak isterseniz vücut kitle indeksiniz kadar kalori almanız gerekmektedir. Tercihiniz kilo vermekten yana ise bu durumda vücut kitle indeksinizden yaklaşık olarak 500 kalori altında beslenmeniz sağlıklı şekilde kilo vermenizi sağlayacaktır. Aynı şekilde yediklerinizden aldığınız kalori vücut kitle indeksinizden fazla miktarda ise eğer bu da kilo alımı ile sonuçlanacaktır. İnsan vücudu günlük ortalama 2500 kalori yakmaktadır. Yakılan bu ortalama kalori günlük yaşantımızı sürdürürken harcadığımız enerji miktarıdır. Günlük yaklaşık 40 dakika normal/hızlı tempoda yürümek, yemeklerden öncesinde 1-2 bardak su ve yeşillik çiğnemek; yemek yerken çok çiğneyip her bir lokmayı farkındalıkla tüketmek hem daha az besinle doymanızı hem de harcadığınız enerjinin/kalorinin alınan kaloriden fazla olmasını sağlar ve kilo verimini destekler. İdeal beden insanın kendisini mutlu ve sağlıklı hissettiği bedendir. Kendinizi sevmeyi unutmayın…";
       default:
-        text =
-          "Eğer bundan memnunsanız ve korumak isterseniz vücut kitle indeksiniz kadar kalori almanız gerekmektedir. Tercihiniz kilo vermekten yana ise vücut kitle indeksinizden yaklaşık olarak 500 kalori kadar az beslenmek size yardımcı olacaktır. Aynı şekilde kilo almak istediğiniz takdirde yine yaklaşık 500 kalori kadar fazla beslenmek kilo alımınızı destekleyecektir. İnsan vücudu günlük ortalama 2500 kalori yakmaktadır. Yakılan bu ortalama kalori günlük yaşantımızı sürdürürken harcadığımız enerji miktarıdır. Hedefiniz kilonuzu korumak ise yediklerinizin besin değerine dikkat ederek indeksi aşmadan beslenmek, aştığınız takdirde fazla efor istemeyen egzersizlere başvurmak ya da vücudunuzu güçlendirip formunuzu oturtacak sporlara başvurmak yardımcı olacaktır. Tercihiniz kilo veriminden yana ise yemeklerden öncesinde 1-2 bardak su içmek, kalori yakımını yürüyüş ve yüzme gibi sporlarla desteklemek kilo vermenize yardımcı olacaktır. Kilo almak istediğiniz takdirde ise yemeklerden öncesinde bir parmak kadar tuz tüketmek, besleyiciliği yüksek besinler ve zengin lif kaynağı olan besinleri tüketmek kilo alımınıza yardımcı olacaktır. İdeal beden insanın kendisini mutlu ve sağlıklı hissettiği bedendir. Kendinizi sevmeyi unutmayın…";
-        break;
+        return "Eğer bundan memnunsanız ve korumak isterseniz vücut kitle indeksiniz kadar kalori almanız gerekmektedir. Tercihiniz kilo vermekten yana ise vücut kitle indeksinizden yaklaşık olarak 500 kalori kadar az beslenmek size yardımcı olacaktır. Aynı şekilde kilo almak istediğiniz takdirde yine yaklaşık 500 kalori kadar fazla beslenmek kilo alımınızı destekleyecektir. İnsan vücudu günlük ortalama 2500 kalori yakmaktadır. Yakılan bu ortalama kalori günlük yaşantımızı sürdürürken harcadığımız enerji miktarıdır. Hedefiniz kilonuzu korumak ise yediklerinizin besin değerine dikkat ederek indeksi aşmadan beslenmek, aştığınız takdirde fazla efor istemeyen egzersizlere başvurmak ya da vücudunuzu güçlendirip formunuzu oturtacak sporlara başvurmak yardımcı olacaktır. Tercihiniz kilo veriminden yana ise yemeklerden öncesinde 1-2 bardak su içmek, kalori yakımını yürüyüş ve yüzme gibi sporlarla desteklemek kilo vermenize yardımcı olacaktır. Kilo almak istediğiniz takdirde ise yemeklerden öncesinde bir parmak kadar tuz tüketmek, besleyiciliği yüksek besinler ve zengin lif kaynağı olan besinleri tüketmek kilo alımınıza yardımcı olacaktır. İdeal beden insanın kendisini mutlu ve sağlıklı hissettiği bedendir. Kendinizi sevmeyi unutmayın…";
     }
-
-    return text;
   };
 
   return (
