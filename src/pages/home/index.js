@@ -70,13 +70,13 @@ function Home() {
 
   return (
     <div>
-      <Flex>
+      <Flex direction={["column", "column", "row"]}>
         <Box flex={1}>
           <Heading as="h2" size="md">
             Vücut Kitle İndeksi Hesaplayıcı
           </Heading>
           <form onSubmit={formik.handleSubmit}>
-            <FormControl p={5}>
+            <FormControl p={[3, 3, 5]}>
               <HStack>
                 <FormLabel>Kilonuz</FormLabel>
                 <Input

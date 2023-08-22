@@ -28,9 +28,9 @@ function App() {
           <div>
             <Flex
               alignItems={"center"}
-              justifyContent={"space-between"}
-              py={2}
-              px={20}
+              justifyContent={["center", "center", "space-between"]}
+              py={[1, 1, 2]}
+              px={[5, 5, 10, 20]}
               gap={10}
             >
               <Box>
@@ -50,7 +50,7 @@ function App() {
                   </Tab>
                 </TabList>
               </Tabs>
-              <Spacer />
+              <Spacer display={["none", "none", "block"]} />
               <Box>
                 <FontAwesomeIcon
                   icon={faHeart}
@@ -62,7 +62,7 @@ function App() {
           </div>
         </nav>
 
-        <Container maxW={"5xl"} py={20}>
+        <Container maxW={"5xl"} py={[10, 10, 20]}>
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/more" component={More} />
